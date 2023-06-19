@@ -7,7 +7,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"token\": {\n        \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6M\",\n        \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNT\"\n    },\n    \"is_new\": false\n}",
+          "content": "{\n    \"token\": {\n        \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6M\",\n        \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNT\"\n    }\n}",
           "type": "json"
         }
       ],
@@ -33,13 +33,6 @@ define({ "api": [
             "optional": false,
             "field": "token.access",
             "description": "<p>Токен пользователя</p>"
-          },
-          {
-            "group": "Response",
-            "type": "Boolean",
-            "optional": false,
-            "field": "is_new",
-            "description": "<p>Информация о регистрации пользователя</p>"
           }
         ]
       }
