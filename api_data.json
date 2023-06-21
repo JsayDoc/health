@@ -149,5 +149,70 @@
     },
     "filename": "health/apps/account/rest/v1/urls.py",
     "groupTitle": "Аутентификация"
+  },
+  {
+    "type": "get",
+    "url": "survey/list/",
+    "title": "Список вопросов",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"id\": 1,\n        \"name\": \"Как вы оцениваете свое физическое состояние на данный момент?\",\n        \"is_multiple\": false,\n        \"survey_answers\": [\n            {\n                \"id\": 1,\n                \"name\": \"Отличное\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Хорошее\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Удовлетворительное\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Плохое\"\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Цель, которая вам интересна?\",\n        \"is_multiple\": true,\n        \"survey_answers\": [\n            {\n                \"id\": 16,\n                \"name\": \"Испытания самому себе, элемент игры\"\n            },\n            {\n                \"id\": 17,\n                \"name\": \"Улучшить кровообращение в мозге и эффективнее решать задачи\"\n            },\n            {\n                \"id\": 18,\n                \"name\": \"Не чувствовать себя разбитым с утра, быть отдохнувшим\"\n            },\n            {\n                \"id\": 19,\n                \"name\": \"Быть примером для своих детей\"\n            }\n        ]\n    }\n]",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "List",
+            "optional": false,
+            "field": "survey_answers",
+            "description": "<p>Список ответов</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "survey_answers.id",
+            "description": "<p>ID ответа</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "survey_answers.name",
+            "description": "<p>Ответ</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID вопроса</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Вопрос</p>"
+          },
+          {
+            "group": "Response",
+            "type": "Boolean",
+            "optional": false,
+            "field": "is_multiple",
+            "description": "<p>Множественный выбор <code>True</code> - да, <code>False</code> - нет</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "name": "survey_list",
+    "group": "Опросы",
+    "filename": "health/apps/survey/rest/v1/api.py",
+    "groupTitle": "Опросы"
   }
 ]
