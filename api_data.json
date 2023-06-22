@@ -153,11 +153,11 @@
   {
     "type": "post",
     "url": "survey/add/answers/",
-    "title": "Добавить ответы на опрос",
+    "title": "Добавить ответ",
     "parameter": {
       "examples": [
         {
-          "title": "Success-Request:",
+          "title": "Example-Request:",
           "content": "[\n    {\n        \"id\": 7, \"survey_answers\": [5]\n    }, \n    {   \n        \"id\": 11, \"survey_answers\": [16, 17, 18, 19]\n    }\n]",
           "type": "json"
         }
@@ -233,7 +233,7 @@
     ],
     "name": "add_survey_answers",
     "group": "Опросы",
-    "description": "<p>Необходимо оправить список ID вопросов, со списков ID ответов</p>",
+    "description": "<p>Необходимо оправить список ID вопросов, со списком ID ответов</p>",
     "filename": "health/apps/survey/rest/v1/api.py",
     "groupTitle": "Опросы"
   },
