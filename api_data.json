@@ -151,6 +151,93 @@
     "groupTitle": "Аутентификация"
   },
   {
+    "type": "post",
+    "url": "survey/add/answers/",
+    "title": "Добавить ответы на опрос",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Success-Request:",
+          "content": "[\n    {\n        \"id\": 7, \"survey_answers\": [5]\n    }, \n    {   \n        \"id\": 11, \"survey_answers\": [16, 17, 18, 19]\n    }\n]",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID вопроса</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "List",
+            "optional": false,
+            "field": "survey_answers",
+            "description": "<p>ID ответов через запятую</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Опрос пройден удачно\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Опрос пройден удачно</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "{\n    \"error_message\": \"Количество ответов должно быть 7\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "add_survey_answers",
+    "group": "Опросы",
+    "description": "<p>Необходимо оправить список ID вопросов, со списков ID ответов</p>",
+    "filename": "health/apps/survey/rest/v1/api.py",
+    "groupTitle": "Опросы"
+  },
+  {
     "type": "get",
     "url": "survey/list/",
     "title": "Список вопросов",
