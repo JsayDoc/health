@@ -310,7 +310,7 @@ define({ "api": [
     "groupTitle": "Опросы"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "accounts/account/info/",
     "title": "Данные пользователя",
     "success": {
