@@ -342,7 +342,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "day_time",
-            "description": "<p>Имя <code>День</code> время суток</p>"
+            "description": "<p><code>День</code> время суток</p>"
           },
           {
             "group": "Response",
