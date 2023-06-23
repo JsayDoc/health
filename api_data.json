@@ -308,5 +308,104 @@
     "group": "Опросы",
     "filename": "health/apps/survey/rest/v1/api.py",
     "groupTitle": "Опросы"
+  },
+  {
+    "type": "post",
+    "url": "accounts/account/info/",
+    "title": "Данные пользователя",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"first_name\": \"Arnak\",\n    \"morning_time\": \"06:00\",\n    \"day_time\": \"12:00\",\n    \"evening_time\": \"18:00\",\n    \"day_end_time\": \"23:00\",\n    \"tz\": 4.0,\n    \"is_survey\": true,\n    \"photo\": \"https://dev-api-health.jsay.ru/media/avatar/photo.jpg\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "first_name",
+            "description": "<p>Имя пользователя</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "morning_time",
+            "description": "<p><code>Утро</code> время суток</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "day_time",
+            "description": "<p>Имя <code>День</code> время суток</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "evening_time",
+            "description": "<p><code>Вечер</code> время суток</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "day_end_time",
+            "description": "<p><code>Конец дня</code></p>"
+          },
+          {
+            "group": "Response",
+            "type": "Float",
+            "optional": false,
+            "field": "tz",
+            "description": "<p>Часовой пояс</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "is_survey",
+            "description": "<p>Опрос пройден <code>True</code> - да, <code>False</code> - нет</p>"
+          },
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "photo",
+            "description": "<p>Ссылка на фото профиля</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "account_info",
+    "group": "Пользователь",
+    "filename": "health/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
   }
 ]
