@@ -407,5 +407,104 @@ define({ "api": [
     "group": "Пользователь",
     "filename": "health/apps/account/rest/v1/api.py",
     "groupTitle": "Пользователь"
+  },
+  {
+    "type": "patch",
+    "url": "accounts/account/update/",
+    "title": "Обновление данных",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"first_name\": \"Arnak\",\n    \"morning_time\": \"06:00\",\n    \"day_time\": \"12:00\",\n    \"evening_time\": \"18:00\",\n    \"day_end_time\": \"23:00\",\n    \"tz\": 4.0,\n    \"photo\": \"https://dev-api-health.jsay.ru/media/avatar/photo.jpg\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "account_update",
+    "group": "Пользователь",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "first_name",
+            "description": "<p>Имя пользователя</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "morning_time",
+            "description": "<p><code>Утро</code> формат времени <code>%H:%M</code></p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "day_time",
+            "description": "<p><code>День</code> формат времени <code>%H:%M</code></p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "evening_time",
+            "description": "<p><code>Вечер</code> формат времени <code>%H:%M</code></p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "day_end_time",
+            "description": "<p><code>Конец дня</code> формат времени <code>%H:%M</code></p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Float",
+            "optional": true,
+            "field": "tz",
+            "description": "<p>Часовой пояс</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "File",
+            "allowedValues": [
+              "png",
+              "jpeg",
+              "jpg"
+            ],
+            "optional": false,
+            "field": "photo",
+            "description": "<p>Фото профиля</p>"
+          }
+        ]
+      }
+    },
+    "filename": "health/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
   }
 ] });
