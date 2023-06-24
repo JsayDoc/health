@@ -497,7 +497,7 @@ define({ "api": [
               "jpeg",
               "jpg"
             ],
-            "optional": false,
+            "optional": true,
             "field": "photo",
             "description": "<p>Фото профиля</p>"
           }
