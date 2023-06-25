@@ -506,5 +506,55 @@ define({ "api": [
     },
     "filename": "health/apps/account/rest/v1/api.py",
     "groupTitle": "Пользователь"
+  },
+  {
+    "type": "delete",
+    "url": "accounts/account/destroy/",
+    "title": "Удалить пользователя",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"message\": \"Пользователь удален\"\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Информационное сообщение</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>User Bearer Token.</p>"
+          }
+        ]
+      }
+    },
+    "permission": [
+      {
+        "name": "User",
+        "title": "User access rights needed.",
+        "description": "<p>Permission is granted to modify user objects.</p>"
+      }
+    ],
+    "name": "destroy_user",
+    "group": "Пользователь",
+    "filename": "health/apps/account/rest/v1/api.py",
+    "groupTitle": "Пользователь"
   }
 ] });
