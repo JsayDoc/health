@@ -5,12 +5,6 @@
   "title": "Проект Health",
   "url": "https://dev-api-health.jsay.ru/api/v1/",
   "sampleUrl": "https://dev-api-health.jsay.ru/api/v1/",
-  "header": {
-    "Authorization": {
-      "description": "Bearer Token",
-      "defaultValue": "YOUR_TOKEN"
-    }
-  },
   "template": {
     "showRequiredLabels": true,
     "withCompare": true,
