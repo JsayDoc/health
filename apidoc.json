@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "API документация",
   "title": "Проект Health",
-  "url": "https://dev-api-health.jsay.ru/api/v1/"
+  "url": "https://dev-api-health.jsay.ru/api/v1/",
+  "template": {
+    "withCompare": false
+  }
 }
